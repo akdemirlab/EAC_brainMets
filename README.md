@@ -20,30 +20,6 @@ OncogeneCN_comparison_Figure.R
 
 ribbon_plot.py
 
-refphase_Figure.R developed from https://bitbucket.org/schwarzlab/refphase/src/master/
-execution of refphase R script: 
-
-```
-SAMPLE_IDS="SAMPLEID"
-PATIENT_ID=PATIENTID
-
-ASCAT_PATH=/results/ascat/
-REFPHASE_DIR=/results/refphase/$PATIENT_ID/
-MEDICC_DIR=/results/medicc2/$PATIENT_ID/
-
-. ~/.bashrc
-module load R/4.2.1
-RSCRIPT=/scripts/sv/refphase.R
-mkdir -p $REFPHASE_DIR && cd $REFPHASE_DIR
-Rscript --vanilla $RSCRIPT $ASCAT_PATH "$SAMPLE_IDS" $REFPHASE_DIR
-
-
-conda activate /miniconda3/envs/medicc2
-mkdir -p $MEDICC_DIR && cd $MEDICC_DIR
-medicc2 --input-type tsv $REFPHASE_DIR/refphase-segmentation.tsv $MEDICC_DIR
-```
-
-
 
 
 
@@ -70,6 +46,33 @@ execution of CycleViz script:
 python3 CycleViz.py -g ../SampleID-WG01_amplicon1_graph.txt --cycles_file ../SampleID-WG01_amplicon1_cycles.txt 
     --cycle 3 --ref GRCh38 --gene_subset_file ../list.txt --annotate_structure genes --gene_fontsize 15 --tick_fontsize 7
 ```
+
+
+
+refphase_Figure.R developed from https://bitbucket.org/schwarzlab/refphase/src/master/
+execution of refphase R script: 
+
+```
+SAMPLE_IDS="SAMPLEID"
+PATIENT_ID=PATIENTID
+
+ASCAT_PATH=/results/ascat/
+REFPHASE_DIR=/results/refphase/$PATIENT_ID/
+MEDICC_DIR=/results/medicc2/$PATIENT_ID/
+
+. ~/.bashrc
+module load R/4.2.1
+RSCRIPT=/scripts/sv/refphase.R
+mkdir -p $REFPHASE_DIR && cd $REFPHASE_DIR
+Rscript --vanilla $RSCRIPT $ASCAT_PATH "$SAMPLE_IDS" $REFPHASE_DIR
+
+
+conda activate /miniconda3/envs/medicc2
+mkdir -p $MEDICC_DIR && cd $MEDICC_DIR
+medicc2 --input-type tsv $REFPHASE_DIR/refphase-segmentation.tsv $MEDICC_DIR
+```
+
+
 
 Xenium_ERBB2_EGFR_expression_boxplots_Figure.R
 
