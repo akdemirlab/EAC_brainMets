@@ -8,9 +8,15 @@ This repository contains the scripts used in the EAC brain metastasis manuscript
 
 Comutplot_with_allsamples_figure.ipynb
 
+CN_comut_plot.ipynb
+
+Data_type_comut_plot.ipynb
+
 DriverGene_proportions_bytype_Figure.R
 
 OncogeneCN_comparison_Figure.R
+
+ribbon_plot.py
 
 refphase_Figure.R developed from https://bitbucket.org/schwarzlab/refphase/src/master/
 execution of refphase R script: 
@@ -40,6 +46,8 @@ medicc2 --input-type tsv $REFPHASE_DIR/refphase-segmentation.tsv $MEDICC_DIR
 
 
 # Scripts in Figure 2 folder were used for spatial transcriptomics analysis and visualization.
+
+spatial_niche_plot.py
 
 Xenium_Annotations_plotting_Script.ipynb, 
 
