@@ -4,7 +4,7 @@
 This repository contains the scripts used in the EAC brain metastasis manuscript
 
 
-# Scripts in Figure 1 folder were used for downstream analysis and visualization.
+# Scripts in WGS folder were used for downstream analysis and visualization.
 
 Comutplot_with_allsamples_figure.ipynb
 
@@ -39,16 +39,18 @@ medicc2 --input-type tsv $REFPHASE_DIR/refphase-segmentation.tsv $MEDICC_DIR
 
 
 
-# Scripts in Figure 2 folder were used for downstream analysis and visualization.
+# Scripts in spatial transcriptomics folder were used for downstream analysis and visualization.
 
-Xenium_Annotations_plotting_Script.ipynb, Xenium_ERBB2_EGFR_expression_boxplots_Figure.R
+Xenium_Annotations_plotting_Script.ipynb, 
+
+Xenium_ERBB2_EGFR_expression_boxplots_Figure.R,
 
 TLS-Finder [script from GITHUB Page](https://github.com/AAKoksoy/TLS-Finder)
 
 
 
 
-# Scripts in Figure 3 folder were used for downstream analysis and visualization.
+# Scripts in ecDNA folder were used for downstream analysis and visualization.
 
 CycleViz [_script from GITHUB Page](https://github.com/AmpliconSuite/CycleViz)
 
@@ -63,7 +65,7 @@ Xenium_ERBB2_EGFR_expression_boxplots_Figure.R
 
 
 
-# Scripts in Figure 4 folder were used for downstream analysis and visualization. 
+# Scripts in scWGS folder were used for downstream analysis and visualization. 
 
 Heatmap scripts developed from the Navin Lab copy number pipeline https://github.com/navinlabcode/copykit
 
