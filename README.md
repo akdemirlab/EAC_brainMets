@@ -1,21 +1,18 @@
 # EAC_brainMets
 
 
-This repository contains the scripts used in the manuscript: Recurrent ERBB2 alterations are associated with esophageal adenocarcinoma brain metastases
-
+This repository contains the scripts used in the EAC brain metastasis manuscript
 
 
 # Scripts in Figure 1 folder were used for downstream analysis and visualization.
 
-A: Comutplot_with_allsamples_figure.ipynb
+Comutplot_with_allsamples_figure.ipynb
 
-B: DriverGene_proportions_bytype_Figure.R
+DriverGene_proportions_bytype_Figure.R
 
-C: OncogeneCN_comparison_Figure.R
+OncogeneCN_comparison_Figure.R
 
-D: jabba_visuzalize_v3_Figure.R developed from https://github.com/mskilab-org/JaBbA
-
-E: refphase_Figure.R developed from https://bitbucket.org/schwarzlab/refphase/src/master/
+refphase_Figure.R developed from https://bitbucket.org/schwarzlab/refphase/src/master/
 execution of refphase R script: 
 
 ```
@@ -38,29 +35,22 @@ mkdir -p $MEDICC_DIR && cd $MEDICC_DIR
 medicc2 --input-type tsv $REFPHASE_DIR/refphase-segmentation.tsv $MEDICC_DIR
 ```
 
-F: MRI images
+
 
 
 
 # Scripts in Figure 2 folder were used for downstream analysis and visualization.
 
-A: Graphical summary 
+Xenium_Annotations_plotting_Script.ipynb, Xenium_ERBB2_EGFR_expression_boxplots_Figure.R
 
-B: Xenium_Annotations_plotting_Script.ipynb, Xenium_ERBB2_EGFR_expression_boxplots_Figure.R
+TLS-Finder [script from GITHUB Page](https://github.com/AAKoksoy/TLS-Finder)
 
-C: Spatial Maps produced by Xenium Explorer, TLS-Finder [script from GITHUB Page](https://github.com/AAKoksoy/TLS-Finder)
-
-D: Spatial Maps produced by Xenium Explorer,  MRI images, Xenium_comparing_celltype_primaryvsmet_barplot.R
 
 
 
 # Scripts in Figure 3 folder were used for downstream analysis and visualization.
 
-A: Xenium Explorer images and microscope images
-
-B: ecDNAcountscomparison_Figure.R
-
-C: CycleViz [_script from GITHUB Page](https://github.com/AmpliconSuite/CycleViz)
+CycleViz [_script from GITHUB Page](https://github.com/AmpliconSuite/CycleViz)
 
 execution of CycleViz script:
 
@@ -69,7 +59,7 @@ python3 CycleViz.py -g ../SampleID-WG01_amplicon1_graph.txt --cycles_file ../Sam
     --cycle 3 --ref GRCh38 --gene_subset_file ../list.txt --annotate_structure genes --gene_fontsize 15 --tick_fontsize 7
 ```
 
-D: Xenium_ERBB2_EGFR_expression_boxplots_Figure.R
+Xenium_ERBB2_EGFR_expression_boxplots_Figure.R
 
 
 
@@ -77,14 +67,9 @@ D: Xenium_ERBB2_EGFR_expression_boxplots_Figure.R
 
 Heatmap scripts developed from the Navin Lab copy number pipeline https://github.com/navinlabcode/copykit
 
-A: scWGS_heatmap_wholegenome_Figure.R
+scWGS_heatmap_wholegenome_Figure.R
 
-B: Pseudobulk_coverage_Figure.R
+Pseudobulk_coverage_Figure.R
 
-C: scWGS_Heatmap_bychromosome_Figure.R
+scWGS_Heatmap_bychromosome_Figure.R
 
-D: scWGS_heatmap_wholegenome_Figure.R
-
-E: Pseudobulk_coverage_Figure.R
-
-F: scWGS_Heatmap_bychromosome_Figure.R
