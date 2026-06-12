@@ -1,90 +1,73 @@
 # EAC_brainMets
 
+## Plotting and Analysis Scripts
 
-This repository contains the scripts used in the EAC brain metastasis manuscript
+This repository contains the scripts used for analysis and plotting of figures in the EAC brain metastasis manuscript.
 
+## Figure 1
 
-# Scripts in Figure 1 folder were used for WGS analysis and visualization.
+Scripts in the `Figure1` folder were used for analysis and plotting of the data shown in this figure.
 
-LMD_swimmer-plot.R
+The [Signal website](https://signal.mutationalsignatures.com/) was used for COSMIC mutational signature analysis.
 
-Comutplot_with_allsamples_figure.ipynb
+## Figure 2
 
-CN_comut_plot.ipynb
+Scripts in the `Figure2` folder were used for analysis and plotting of the data shown in this figure.
 
-Data_type_comut_plot.ipynb
+Additionally, scripts from [AMPLIFISH](https://github.com/akdemirlab/AMPLIFISH) were used for analysis and plotting of this data.
 
-DriverGene_proportions_bytype_Figure.R
+## Figure 3
 
-OncogeneCN_comparison_Figure.R
+Scripts in the `Figure3` folder were used for analysis and plotting of the data shown in this figure.
 
-ribbon_plot.py
+- Heatmap scripts were developed from the [Navin Lab copy number pipeline (CopyKit)](https://github.com/navinlabcode/copykit).
+- Additional plotting and analysis used the scripts described below.
 
+### CycleViz
 
+Plots were generated using [CycleViz](https://github.com/AmpliconSuite/CycleViz).
 
+Example execution:
 
-# Scripts in Figure 2 folder were used for spatial transcriptomics analysis and visualization.
-
-spatial_niche_plot.py
-
-Xenium_Annotations_plotting_Script.ipynb, 
-
-Xenium_ERBB2_EGFR_expression_boxplots_Figure.R,
-
-TLS-Finder [script from GITHUB Page](https://github.com/AAKoksoy/TLS-Finder)
-
-
-
-
-# Scripts in Figure 3 folder were used for ecDNA and expression analysis and visualization.
-
-CycleViz [_script from GITHUB Page](https://github.com/AmpliconSuite/CycleViz)
-
-execution of CycleViz script:
-
-```
-python3 CycleViz.py -g ../SampleID-WG01_amplicon1_graph.txt --cycles_file ../SampleID-WG01_amplicon1_cycles.txt 
+```bash
+python3 CycleViz.py -g ../SampleID-WG01_amplicon1_graph.txt --cycles_file ../SampleID-WG01_amplicon1_cycles.txt \
     --cycle 3 --ref GRCh38 --gene_subset_file ../list.txt --annotate_structure genes --gene_fontsize 15 --tick_fontsize 7
 ```
 
+### refphase
 
+`refphase_Figure.R` was developed from [refphase](https://bitbucket.org/schwarzlab/refphase/src/master/).
 
-refphase_Figure.R developed from https://bitbucket.org/schwarzlab/refphase/src/master/
-execution of refphase R script: 
+Example execution:
 
-```
+```bash
 SAMPLE_IDS="SAMPLEID"
 PATIENT_ID=PATIENTID
-
 ASCAT_PATH=/results/ascat/
 REFPHASE_DIR=/results/refphase/$PATIENT_ID/
 MEDICC_DIR=/results/medicc2/$PATIENT_ID/
 
 . ~/.bashrc
 module load R/4.2.1
+
 RSCRIPT=/scripts/sv/refphase.R
 mkdir -p $REFPHASE_DIR && cd $REFPHASE_DIR
 Rscript --vanilla $RSCRIPT $ASCAT_PATH "$SAMPLE_IDS" $REFPHASE_DIR
-
 
 conda activate /miniconda3/envs/medicc2
 mkdir -p $MEDICC_DIR && cd $MEDICC_DIR
 medicc2 --input-type tsv $REFPHASE_DIR/refphase-segmentation.tsv $MEDICC_DIR
 ```
 
+## Figure 4
 
+Scripts in the `Figure4` folder were used for analysis and plotting of the data shown in this figure.
 
-Xenium_ERBB2_EGFR_expression_boxplots_Figure.R
+Spatial niche plotting was performed using `spatial_niche_plot.py` in order to zoom in on particular regions of the tumor section.
 
+## Figure 5
 
+Scripts in the `Figure5` folder were used for analysis and plotting of the data shown in this figure.
 
-# Scripts in Figure 4 folder were used for scWGS analysis and visualization. 
-
-Heatmap scripts developed from the Navin Lab copy number pipeline https://github.com/navinlabcode/copykit
-
-scWGS_heatmap_wholegenome_Figure.R
-
-Pseudobulk_coverage_Figure.R
-
-scWGS_Heatmap_bychromosome_Figure.R
+[CellCharter](https://github.com/CSOgroup/cellcharter) (v0.3.7) was used for neighborhood analysis prior to running `cellcharter-neighborhood_spatial_analysis.py`.
 
