@@ -2,7 +2,10 @@
 
 ## Plotting and Analysis Scripts
 
-This repository contains the scripts used for analysis and plotting of figures in the EAC brain metastasis manuscript.
+This repository contains the scripts used for analysis and plotting of figures in the associated paper, EAC brain metastasis manuscript.
+
+Software versions and dependencies are described in the Methods section of the paper.
+
 
 ## Figure 1
 
